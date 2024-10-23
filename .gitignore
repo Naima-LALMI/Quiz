@@ -1,0 +1,26 @@
+# Ignorer les fichiers de configuration (par exemple, pour des variables d'environnement)
+.env
+
+# Ignorer les fichiers de logs
+*.log
+
+# Ignorer les fichiers cache et temporaires
+*.cache
+*.tmp
+
+# Ignorer les sauvegardes automatiques (souvent générées par des éditeurs de texte)
+*.bak
+
+# Ignorer les dossiers générés par Composer (outil de gestion des dépendances pour PHP)
+vendor/
+
+# Ignorer les fichiers des IDE (environnement de développement intégré)
+.vscode/
+.idea/
+
+# Ignorer les fichiers de test spécifiques
+coverage/
+tests-output/
+
+# Ignorer les fichiers de session PHP
+session.save_path
