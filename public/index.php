@@ -1,3 +1,20 @@
+<?php
+//Connection BDD
+require __DIR__ . '/../congiguration/config.php'; 
+
+//On récupere la liste des questions
+//On fait la requete 
+$sql ="SELECT `question` FROM `questions`";
+//On execute la requete
+$requete= $db->query($sql);
+//On recupere les données de la requete
+$listequestion = $requete->fetchAll();
+// echo "<pre>";
+// var_dump($listequestion);
+// echo "</pre>";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +26,19 @@
 </head>
 <body>
 <h1>Quiz Assistantes dentaires </h1>
-<?php echo "Bienvenu  "?>
-<?php require __DIR__ . '/../congiguration/config.php'; ?>
+<?php echo "Bienvenue ! Testez vos connaissances sur les soins dentaires. Bonne chance !";?>
+
+<p>Liste des articles</p>
+<?php foreach($listequestion as $question):?>
+<article>
+    <li> <?php echo  $question ["question"] ?></li>
+</article>
+<?php 
+    endforeach;
+?>
+
+
+
 
   
 <footer>&copy;2024</footer>
