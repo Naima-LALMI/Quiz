@@ -33,28 +33,28 @@ try {
 //Ici on est connectés à la base 
 
 // On peut recupere la liste des utilisateurs 
-$sql = "SELECT * FROM `utilisateur`";
-// On execute directement la requête
-$requete = $db->query($sql);
-var_dump($requete);
-//On récupére les données (fetch ou fetchALl)
-$user = $requete->fetch();
-echo "<pre>";
-print_r($user);
-echo "</pre>";
+// $sql = "SELECT * FROM `utilisateur`";
+// // On execute directement la requête
+// $requete = $db->query($sql);
+// var_dump($requete);
+// //On récupére les données (fetch ou fetchALl)
+// $user = $requete->fetch();
+// echo "<pre>";
+// print_r($user);
+// echo "</pre>";
 
 
-//Ajouter un utilisateur 
-// $sql = "INSERT INTO `utilisateur`(`nom`,`prenom`, `email`) VALUES ('Marin','Elisa','marin.elisa@exemple.com')";
+// //Ajouter un utilisateur 
+// // $sql = "INSERT INTO `utilisateur`(`nom`,`prenom`, `email`) VALUES ('Marin','Elisa','marin.elisa@exemple.com')";
+// // $requete = $db->query($sql);
+// // var_dump($requete);
+
+// //modifier un utilisateur 
+// $sql = "UPDATE `utilisateur` SET `email`='dupont.paul@exemple.com'  WHERE `id`=1";
 // $requete = $db->query($sql);
 // var_dump($requete);
 
-//modifier un utilisateur 
-$sql = "UPDATE `utilisateur` SET `email`='dupont.paul@exemple.com'  WHERE `id`=1";
-$requete = $db->query($sql);
-var_dump($requete);
-
-//supprimer un utilisateur
-$sql = "DELETE FROM `utilisateur` WHERE `id`=5";
-$requete = $db->query($sql);
-var_dump($requete);
+// //supprimer un utilisateur
+// $sql = "DELETE FROM `utilisateur` WHERE `id`=5";
+// $requete = $db->query($sql);
+// var_dump($requete);
