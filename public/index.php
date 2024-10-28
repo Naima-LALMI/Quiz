@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +10,9 @@
 <body>
 <h1>Quiz Assistantes dentaires </h1>
 <?php echo "Bienvenu  "?>
+<?php require __DIR__ . '/../congiguration/config.php'; ?>
 
   
-    
+<footer>&copy;2024</footer>
 </body>
 </html>
