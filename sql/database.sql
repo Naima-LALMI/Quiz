@@ -1,8 +1,8 @@
 CREATE TABLE utilisateur (
 id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100),
-        prenom VARCHAR(100),
-email VARCHAR(255) NOT NULL UNIQUE
+    prenom VARCHAR(100),
+    email VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE questions (
