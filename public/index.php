@@ -26,7 +26,12 @@ $listequestion = $requete->fetchAll();
 </head>
 <body>
 <h1>Quiz Assistantes dentaires </h1>
+<a href="index.php">Accueil</a>
+<a href="ajout_question.php">Formulaire</a>
+<a href="login.php">Compte</a>
+<br>
 <?php echo "Bienvenue ! Testez vos connaissances sur les soins dentaires. Bonne chance !";?>
+<br>
 
 <p>Liste des articles</p>
 <?php foreach($listequestion as $question):?>
