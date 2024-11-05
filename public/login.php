@@ -15,10 +15,10 @@ $requete->bindParam(':email', $email);
 //  vérifier si on est en train d'afficher ou de traiter le formulaire
 $enCoursDeTraitement = isset($_POST['email']);
 if ($enCoursDeTraitement) {
-    $email = $_POST['email'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $password = $_POST['password'];
+    $email = htmlspecialchars($_POST['email']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $requete->execute(
         
