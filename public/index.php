@@ -4,7 +4,7 @@ require __DIR__ . '/../congiguration/config.php';
 
 //On récupere la liste des questions
 //On fait la requete 
-$sql = "SELECT `question` FROM `questions`";
+$sql = "SELECT * FROM `questions`";
 //On execute la requete
 $requete = $db->query($sql);
 //On recupere les données de la requete
@@ -40,16 +40,31 @@ $listequestion = $requete->fetchAll();
 
     <p>Liste des articles</p>
     <?php foreach ($listequestion as $question): ?>
-        <article>
-            <div class="card mb-3" style="width: 18rem;">
-                <div class="card-body">
-                    <li> <?php echo  $question["question"] ?></li>
+    <article>
+        <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <li><?php echo $question["question"] ?></li>
+                <div>
+                    <input type="radio" id="option_a_<?php echo $question['id']; ?>" name="option_<?php echo $question['id']; ?>" value="option_a" />
+                    <label for="option_a_<?php echo $question['id']; ?>"><?php echo $question["option_a"] ?></label>
+                </div>
+                <div>
+                    <input type="radio" id="option_b_<?php echo $question['id']; ?>" name="option_<?php echo $question['id']; ?>" value="option_b" />
+                    <label for="option_b_<?php echo $question['id']; ?>"><?php echo $question["option_b"] ?></label>
+                </div>
+                <div>
+                    <input type="radio" id="option_c_<?php echo $question['id']; ?>" name="option_<?php echo $question['id']; ?>" value="option_c" />
+                    <label for="option_c_<?php echo $question['id']; ?>"><?php echo $question["option_c"] ?></label>
+                </div>
+                <div>
+                    <input type="radio" id="option_d_<?php echo $question['id']; ?>" name="option_<?php echo $question['id']; ?>" value="option_d" />
+                    <label for="option_d_<?php echo $question['id']; ?>"><?php echo $question["option_d"] ?></label>
                 </div>
             </div>
-        </article>
-    <?php
-    endforeach;
-    ?>
+        </div>
+    </article>
+<?php endforeach; ?>
+
 
     <button type="button"></button>
 
