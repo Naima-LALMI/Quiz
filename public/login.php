@@ -26,6 +26,25 @@ if ($enCoursDeTraitement) {
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="text-center">Quiz Assistantes dentaires </h1>
+    <ul class="nav justify-content-center">
+        <a class="nav-link" href="index.php">Accueil</a>
+        <a class="nav-link" href="ajout_question.php">Formulaire</a>
+        <a class="nav-link" href="login.php">Compte</a>
+    </ul>
+</body>
+</html>
 <h1>Formulaire de connexion</h1>
 <form action="" method="post">
     <label>Votre nom :</label>
